@@ -2,17 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.light {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #171717;
+  --foreground: #c8c8c8;
 }
+
+.light ::-webkit-scrollbar{width: 5px !important; height: 5px !important;}
+.light ::-webkit-scrollbar-track{background: #fff;}
+.light ::-webkit-scrollbar-thumb{background: #ccc;}
+
+.dark ::-webkit-scrollbar{width: 5px !important; height: 5px !important;}
+.dark ::-webkit-scrollbar-track{background: #171717;}
+.dark ::-webkit-scrollbar-thumb{background: #444;}
 
 body {
   color: var(--foreground);
@@ -20,8 +26,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.ReactCollapse--collapse {
+  transition: height 300ms ease;
 }
+
