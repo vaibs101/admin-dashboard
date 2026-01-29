@@ -10,12 +10,12 @@ export const sidebarMenu=[
     {
         title:"Dashboard",
         href:"/",
-        icon:<GridViewOutlinedIcon size={20} />
+        icon:<GridViewOutlinedIcon size={16} />
     },
     {
         title:"Category",
         href:"/category/list",
-        icon:<CategoryOutlinedIcon size={20} />,
+        icon:<CategoryOutlinedIcon size={16} />,
         items:[
             {
                 title:"Category List",
@@ -35,7 +35,7 @@ export const sidebarMenu=[
     {
         title:"Products",
         href:"/products/list",
-        icon:<RiProductHuntLine size={20} />,
+        icon:<RiProductHuntLine size={16} />,
         items:[
             {
                 title:"Products List",
@@ -56,26 +56,26 @@ export const sidebarMenu=[
     {
         title:"Customers",
         href:"/customers/list",
-        icon:<PeopleAltOutlinedIcon size={20} />
+        icon:<PeopleAltOutlinedIcon size={16} />
     },
     {
         title:"Orders",
         href:"/orders/list",
-        icon:<ShoppingCartOutlinedIcon size={20} />
+        icon:<ShoppingCartOutlinedIcon size={16} />
     },
     {
         title:"Mail",
         href:"/mail/list",
-        icon:<MarkEmailUnreadOutlinedIcon size={20} />
+        icon:<MarkEmailUnreadOutlinedIcon size={16} />
     },
     {
         title:"Chat",
         href:"/chat/list",
-        icon:<MarkUnreadChatAltOutlinedIcon size={20} />
+        icon:<MarkUnreadChatAltOutlinedIcon size={16} />
     },
     {
         title:"Logout",
         href:"/login",
-        icon:<LogoutOutlinedIcon size={20} />
+        icon:<LogoutOutlinedIcon size={16} />
     }
 ]
