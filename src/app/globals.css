@@ -24,9 +24,19 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 .ReactCollapse--collapse {
   transition: height 300ms ease;
 }
 
+.card{
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+.dark .MuiSelect-root{color: #fff !important;}
+.dark .MuiSelect-root fieldset{border-color: rgba(255,255,255,0.3) !important;}
+.dark .MuiPaper-elevation{background: #25252a !important;}
+.dark .MuiPaper-elevation *{color:rgba(255,255,255,0.8) !important;}
+.MuiPaper-elevation *{font-size: 14px !important;}
