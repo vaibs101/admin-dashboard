@@ -1,9 +1,9 @@
 import React from 'react'
 import DatePicker from 'react-date-picker'
 
-const YearSelect = () => {
+const YearSelect = ({ onChange }) => {
   const handleChange = (date) => {
-    console.log(date);
+    if (onChange) onChange(date);
   }
     return (
     <div>

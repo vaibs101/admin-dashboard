@@ -80,3 +80,42 @@ body {
 {
    color: rgba(255,255,255,0.3) !important;
 }
+
+.btn-border{
+  border: 1px solid rgba(0,0,0,0.2) !important;
+  color: #151515 !important;
+  font-weight: 600 !important;
+}
+.dark .btn-border{
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  color: #f1f1f1 !important;
+}
+
+.dark .btn-border:hover{
+  border: 1px solid rgba(255,255,255,0.4) !important;
+}
+
+.btn-dark{
+  background: #151515 !important;
+  color: #f1f1f1 !important;
+  font-weight: 600 !important;
+}
+
+.dark .btn-dark{
+  background: #f1f1f1 !important;
+  color: #151515 !important;
+}
+
+.dark .btn-dark:hover{
+  background: #fff !important;
+  color: #151515 !important;
+}
+
+.dark .MuiCheckbox-root{
+  color: rgba(255,255,255,0.8) !important;
+}
+
+.dark .MuiRating-icon .MuiRating-iconEmpty{
+color: rgba(255,255,255,0.3) !important;
+}
+

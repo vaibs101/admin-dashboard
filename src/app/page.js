@@ -2,7 +2,7 @@
 import DashboardBoxes from "@/Components/DashboardBox";
 import { Button } from "@mui/material";
 import { FiPlus } from "react-icons/fi";
-import { AreaChart, Area, Tooltip } from 'recharts';
+import { AreaChart,LineChart, Area, Tooltip } from 'recharts';
 import { ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Legend, Scatter } from 'recharts';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
@@ -13,6 +13,9 @@ import { TbSocial } from "react-icons/tb";
 import  Cookies from 'js-cookie';
 import SearchBox from "@/Components/SearchBox";
 import Orders from "./orders/page";
+import YearSelect from "@/Components/YearSelect";
+//import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+
 
 //Custom Tooltip Component
 const CustomTooltipProfit = ({ active, payload, label }) => {
@@ -33,9 +36,23 @@ const CustomTooltipProfit = ({ active, payload, label }) => {
     return (
       <div style={{ backgroundColor: theme === 'dark' ? "#1f2937" : 'white', border: '1px solid #ccc', padding: '10px', borderRadius: '5px' }}>
      <p><strong>Month:</strong>{label}</p>
-      <p><span style={{color: '#8884d8'}}>Revenue:</span>{payload[0].value}</p>
+      <p><span style={{color: '#8884d8'}}>Revenue:</span>${payload[0].value}</p>
     
-     <p><span style={{color: '#1a9ced'}}>Expense:</span>{payload[1].value}</p>
+     <p><span style={{color: '#1a9ced'}}>Expense:</span>${payload[1].value}</p>
+      </div>
+    )}
+    return null;
+  }
+
+  const CustomTooltipCustomerRate = ({ active, payload, label }) => {
+  const theme=Cookies.get("theme");
+  if (active && payload && payload.length) {
+    return (
+      <div style={{ backgroundColor: theme === 'dark' ? "#1f2937" : 'white', border: '1px solid #ccc', padding: '10px', borderRadius: '5px' }}>
+     <p><strong>Month:</strong>{label}</p>
+      <p><span style={{color: '#10b780'}}>New Customers:</span>{payload[0].value}</p>
+    
+     <p><span style={{color: '#3872fa'}}>Old Customers:</span>{payload[1].value}</p>
       </div>
     )}
     return null;
@@ -150,14 +167,84 @@ const salesData = [
   },
  
 ];
+
+const customerRateData = [
+  {
+    name: 'JAN',
+    newCustomer: 4000,
+    oldCustomer: 2400,
+  },
+  {
+    name: 'FEB',
+    newCustomer: 3000,
+    oldCustomer: 1398,
+  },
+  {
+    name: 'MAR',
+    newCustomer: 2000,
+    oldCustomer: 9800,
+  },
+  {
+    name: 'APR',
+    newCustomer: 2780,
+    oldCustomer: 3908,
+  },
+  {
+    name: 'MAY',
+    newCustomer: 1890,
+    oldCustomer: 4800,
+  },
+  {
+    name: 'JUNE',
+    newCustomer: 2390,
+    oldCustomer: 3800,
+  },
+  {
+    name: 'JULY',
+    newCustomer: 3490,
+    oldCustomer: 4300,
+  },
+  {
+    name: 'AUG',
+    newCustomer: 3490,
+    oldCustomer: 4300,
+  },
+  {
+    name: 'SEP',
+    newCustomer: 3490,
+    oldCustomer: 4300,
+  },
+  {
+    name: 'OCT',
+    newCustomer: 3490,
+    oldCustomer: 4300,
+  },
+  {
+    name: 'NOV',
+    newCustomer: 3490,
+    oldCustomer: 4300,
+   },
+  {
+    name: 'DEC',
+    newCustomer: 3490,
+    oldCustomer: 4300,
+  },
+];
 const [revenue, setRevenue] =useState('Monthly');
 const [selectProfitIndex, setSelectProfitIndex] = useState(0);
+const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const handleChangeRevenue = (event) => {
     setRevenue(event.target.value);
   };
 
   const selectProfit=(index)=>{
     setSelectProfitIndex(index);
+  }
+  
+  const handleChangeYear = (date) => {
+    const year = date && typeof date.getFullYear === 'function' ? date.getFullYear() : date?.target?.value || date;
+    setSelectedYear(year);
+    console.log('Selected year:', year);
   }
   
   
@@ -310,7 +397,37 @@ const [selectProfitIndex, setSelectProfitIndex] = useState(0);
 
 <Orders/>
 
+ <div className=" card w-full p-5 dark:border-[rgba(255,255,255,0.1)]">
+<div className="p-5 flex items-center justify-between">
+  <h2 className="text-[20px] font-bold">Repeat Customers Rate</h2>
+<div className="ml-auto">
+  <YearSelect onChange={handleChangeYear}/>
 
+</div>
+  </div>
+  <div className="w-full">
+  <LineChart
+      width={'100%'}
+      height={400}
+      responsive
+      data={customerRateData}
+      margin={{
+        top: 5,
+        right: 0,
+        left: 0,
+        bottom: 5,
+      }}
+    >
+      
+      <XAxis dataKey="name" />
+      <YAxis width="auto" />
+      <Tooltip content={CustomTooltipCustomerRate} />
+      <Legend />
+      <Line type="monotone" dataKey="newCustomer" stroke="#10b780" strokeWidth={4} activeDot={false} />
+      <Line type="monotone" dataKey="oldCustomer" stroke="#3872fa" strokeWidth={4} />
+    </LineChart>
+    </div>
+</div>
     <br/><br/><br/>
    </>
   );
