@@ -28,7 +28,8 @@ return(
 </div>
 <div className={"rightContent transition-all"} style={{width: isToggleSideBar===false ? '82%' : '100%'}}>
   <Header/>
- <div className="px-4  pt-20">
+  <div className="afterHeader" style={{marginTop:"90px"}}/>
+ <div className="px-4">
  {children}
     </div>  
 </div>

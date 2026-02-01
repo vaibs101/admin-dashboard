@@ -10,6 +10,37 @@ import { useState } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoStorefrontOutline } from "react-icons/io5";
 import { TbSocial } from "react-icons/tb";
+import  Cookies from 'js-cookie';
+import SearchBox from "@/Components/SearchBox";
+import Orders from "./orders/page";
+
+//Custom Tooltip Component
+const CustomTooltipProfit = ({ active, payload, label }) => {
+  const theme=Cookies.get("theme");
+  if (active && payload && payload.length) {
+    return (
+      <div style={{ backgroundColor: theme === 'dark' ? "#1f2937" : 'white', border: '1px solid #ccc', padding: '10px', borderRadius: '5px' }}>
+     <p><strong>Days:</strong>{label}</p>
+     <p><span style={{color: '#8884d8'}}>Total Profit:</span>{payload[0].value}</p>
+      </div>
+    )}
+    return null;
+  }
+
+  const CustomTooltipSalesReport = ({ active, payload, label }) => {
+  const theme=Cookies.get("theme");
+  if (active && payload && payload.length) {
+    return (
+      <div style={{ backgroundColor: theme === 'dark' ? "#1f2937" : 'white', border: '1px solid #ccc', padding: '10px', borderRadius: '5px' }}>
+     <p><strong>Month:</strong>{label}</p>
+      <p><span style={{color: '#8884d8'}}>Revenue:</span>{payload[0].value}</p>
+    
+     <p><span style={{color: '#1a9ced'}}>Expense:</span>{payload[1].value}</p>
+      </div>
+    )}
+    return null;
+  }
+
 export default function Home() {
   const profitData = [
   {
@@ -132,7 +163,7 @@ const [selectProfitIndex, setSelectProfitIndex] = useState(0);
   
   return (
    <>
-   <div className="box_dashboard mt-20 mb-4 w-full h-[250px] rounded-md border 
+   <div className="box_dashboard mb-4 w-full h-[250px] rounded-md border 
    border-[rgba(0,0,0,0.2)] dark:border-[rgba(255,255,255,0.1)] px-5 py-1 flex items-center justify-between dark:bg-themeDark">
     <div className="leftCol flex flex-col gap-4">
       <h2 className="text-[35px] font-bold dark:text-gray-200">Welcome back, Admin!</h2>
@@ -180,7 +211,7 @@ const [selectProfitIndex, setSelectProfitIndex] = useState(0);
           <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
         </linearGradient>
       </defs>
-      <Tooltip />
+      <Tooltip content={<CustomTooltipProfit/>} />
       <Area type="monotone" dataKey="uv" strokeWidth={3} stroke="#8884d8" fill="url(#colorUv)" />
     </AreaChart>
     </div>
@@ -247,6 +278,7 @@ const [selectProfitIndex, setSelectProfitIndex] = useState(0);
 
     <div className="salesReport card w-full p-5 dark:border-[rgba(255,255,255,0.1)]">
 <h2 className="text-[20px] font-bold">Sales Report</h2>
+
    <div className="w-full mt-5">
     <ComposedChart
       responsive
@@ -268,14 +300,15 @@ const [selectProfitIndex, setSelectProfitIndex] = useState(0);
       </defs>
       <XAxis dataKey="name" scale="band" tick={{ fontSize: 14 }} />
       <YAxis width="auto" tick={{ fontSize: 14 }}/>
-      <Tooltip />
+      <Tooltip content={<CustomTooltipSalesReport/>}/>
       <Legend />
       <Area type="monotone" dataKey="revenue" fill="url(#colorUv)" stroke="#8884d8" strokeWidth={3} />
-      <Bar dataKey="expense" barSize={20} fill="#8884d8" radius={[10,10,0,0]}/>
+      <Bar dataKey="expense" barSize={20} fill="#1a9ced" radius={[10,10,0,0]}/>
     </ComposedChart>
     </div>
     </div>
 
+<Orders/>
 
 
     <br/><br/><br/>

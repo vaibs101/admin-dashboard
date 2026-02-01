@@ -78,4 +78,127 @@ export const sidebarMenu=[
         href:"/login",
         icon:<LogoutOutlinedIcon size={16} />
     }
+];
+
+export const ordersData=[
+    {
+        orderId: '#12345',
+        customer: {
+            name: 'John Doe',
+                avatar: '/avatar1.jpg',
+            email: 'abc@gmail.com'
+        },
+        item:83,
+        price: '$250.00',
+        createdAt:[{
+            date: '2023-10-05',
+            time: '10:30 AM'
+        }],
+        modifiedAt:[{
+            date: '2023-10-06',
+            time: '11:00 AM'
+        }],
+        status: 'Pending'
+        
+    },
+    {
+        orderId: '#12345',
+        customer: {
+            name: 'John Doe',
+                avatar: '/avatar1.jpg',
+            email: 'abc@gmail.com'
+        },
+        item:83,
+        price: '$250.00',
+        createdAt:[{
+            date: '2023-10-05',
+            time: '10:30 AM'
+        }],
+        modifiedAt:[{
+            date: '2023-10-06',
+            time: '11:00 AM'
+        }],
+        status: 'Shipped'
+        
+    },
+    {
+        orderId: '#12345',
+        customer: {
+            name: 'John Doe',
+            avatar: '/avatar1.jpg',
+            email: 'abc@gmail.com'
+        },
+        item:83,
+        price: '$250.00',
+        createdAt:[{
+            date: '2023-10-05',
+            time: '10:30 AM'
+        }],
+        modifiedAt:[{
+            date: '2023-10-06',
+            time: '11:00 AM'
+        }],
+        status: 'Shipped'
+        
+    },
+    {
+        orderId: '#12345',
+        customer: {
+            name: 'John Doe',
+                avatar: '/avatar1.jpg',
+            email: 'abc@gmail.com'
+        },
+        item:83,
+        price: '$250.00',
+        createdAt:[{
+            date: '2023-10-05',
+            time: '10:30 AM'
+        }],
+        modifiedAt:[{
+            date: '2023-10-06',
+            time: '11:00 AM'
+        }],
+        status: 'Shipped'
+        
+    },
+    {
+        orderId: '#12345',
+        customer: {
+            name: 'John Doe',
+                avatar: '/avatar1.jpg',
+            email: 'abc@gmail.com'
+        },
+        item:83,
+        price: '$250.00',
+        createdAt:[{
+            date: '2023-10-05',
+            time: '10:30 AM'
+        }],
+        modifiedAt:[{
+            date: '2023-10-06',
+            time: '11:00 AM'
+        }],
+        status: 'Shipped'
+        
+    },
+    {
+        orderId: '#12345',
+        customer: {
+            name: 'John Doe',
+                avatar: '/avatar1.jpg',
+            email: 'abc@gmail.com'
+        },
+        item:83,
+        price: '$250.00',
+        createdAt:[{
+            date: '2023-10-05',
+            time: '10:30 AM'
+        }],
+        modifiedAt:[{
+            date: '2023-10-06',
+            time: '11:00 AM'
+        }],
+        status: 'Shipped'
+        
+    }
 ]

@@ -24,7 +24,7 @@ context?.setIsToggleSideBar(!context.isToggleSideBar);
 }
 
   return (
-    <header className="flex fixed top-0 right-0 z-[100] px-4 py-3 justify-between shadow-md transition-all bg-white dark:bg-themeDark" style={{width: context.isToggleSideBar===false ? '82%' : '100%'}}>
+    <header className="flex fixed top-0 right-0 z-[100] px-4 py-3 justify-between shadow-md transition-all bg-white dark:bg-[#111113]" style={{width: context.isToggleSideBar===false ? '82%' : '100%'}}>
       <div className='flex items-center gap-3'>
          <Button className='!min-w-[40px] !w-[40px] !h-[40px] !rounded-full !text-gray-800  hover:!bg-gray-200 dark:!text-gray-200 dark:hover:!bg-gray-800' onClick={toggleNav} >
           {context.isToggleSideBar===false?<BiMenuAltLeft size={25} />:<AiOutlineMenu size={25} />}

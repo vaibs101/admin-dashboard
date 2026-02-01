@@ -12,11 +12,11 @@
   --foreground: #c8c8c8;
 }
 
-.light ::-webkit-scrollbar{width: 5px !important; height: 5px !important;}
+.light ::-webkit-scrollbar{width: 7px !important; height: 7px !important;}
 .light ::-webkit-scrollbar-track{background: #fff;}
 .light ::-webkit-scrollbar-thumb{background: #ccc;}
 
-.dark ::-webkit-scrollbar{width: 5px !important; height: 5px !important;}
+.dark ::-webkit-scrollbar{width: 7px !important; height: 7px !important;}
 .dark ::-webkit-scrollbar-track{background: #171717;}
 .dark ::-webkit-scrollbar-thumb{background: #444;}
 
@@ -40,3 +40,43 @@ body {
 .dark .MuiPaper-elevation{background: #25252a !important;}
 .dark .MuiPaper-elevation *{color:rgba(255,255,255,0.8) !important;}
 .MuiPaper-elevation *{font-size: 14px !important;}
+
+.dark .MuiSelect-iconOutlined{color:rgba(255,255,255,0.8) !important;}
+
+.actions button{
+  border: 1px solid rgba(0,0,0,0.2) !important;
+}
+.dark .actions button{
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+.MuiTableHead-root th{
+  background: #f1f1f1 !important;
+  font-weight: 600 !important;
+  padding: 12px 16px !important;
+}
+.dark thead.MuiTableHead-root th{
+  background: #1f1f1f !important;
+  color: rgba(255,255,255,0.8) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.dark table tr td{
+    color: rgba(255,255,255,0.8) !important;
+      border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+
+
+}
+
+.dark .MuiTablePagination-selectLabel,
+.dark .MuiSelect-icon,
+.dark .MuiTablePagination-displayedRows,
+.dark .MuiIconButton-root
+{
+   color: rgba(255,255,255,0.8) !important;
+   
+}
+
+.dark .MuiIconButton-root .Mui-disabled
+{
+   color: rgba(255,255,255,0.3) !important;
+}
