@@ -18,7 +18,7 @@ const data = [
 ];
 const Box = (props) => {
   return (
-    <div className='box w-full h-auto p-3 py-4 border border-[rgba(0,0,0,0.1)] dark:border-[rgba(255,255,255,0.1)] flex flex-col  gap-3 rounded-md bg-gray-100 dark:bg-themeDark'>
+    <div className='box w-full h-auto p-3 py-4 border border-[rgba(0,0,0,0.1)] dark:border-[rgba(255,255,255,0.1)] flex flex-col  gap-3 rounded-md bg-gray-200 dark:bg-themeDark'>
       <div className='w-full flex items-center justify-between'>
 <div className='flex items-center justify-between gap-3'>
         <div className='leftCol flex items-center gap-3'>

@@ -251,7 +251,7 @@ const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   return (
    <>
    <div className="box_dashboard mb-4 w-full h-[250px] rounded-md border 
-   border-[rgba(0,0,0,0.2)] dark:border-[rgba(255,255,255,0.1)] px-5 py-1 flex items-center justify-between dark:bg-themeDark">
+   border-[rgba(0,0,0,0.2)] bg-white dark:bg-themeDark  dark:border-[rgba(255,255,255,0.1)] px-5 py-1 flex items-center justify-between ">
     <div className="leftCol flex flex-col gap-4">
       <h2 className="text-[35px] font-bold dark:text-gray-200">Welcome back, Admin!</h2>
      <p className="text-[16px] text-gray-800 dark:text-gray-200">Here's what happening on your store today, See the statistics</p>
@@ -266,7 +266,7 @@ const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
    <DashboardBoxes />
 
    <div className="flex gap-4 my-4">
-<div className="card p-0 w-[65%] dark:border-[rgba(255,255,255,0.1)]">
+<div className="card dark:bg-themeDark p-0 w-[65%] dark:border-[rgba(255,255,255,0.1)]">
   <div className="flex items-center justify-between p-5">
    <div className="leftCol">
     <h2 className="text-[18px]">Total Profit</h2>
@@ -304,7 +304,7 @@ const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
     </div>
   </div>
 
-  <div className="card p-5 w-[35%] dark:border-[rgba(255,255,255,0.1)]">
+  <div className="card dark:bg-themeDark p-5 w-[35%] dark:border-[rgba(255,255,255,0.1)]">
   <div className="flex items-center justify-between">
    <div className="leftCol">
     <h2 className="text-[22px] font-bold">Channel Revenue</h2>
@@ -363,7 +363,7 @@ const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   </div>
     </div>
 
-    <div className="salesReport card w-full p-5 dark:border-[rgba(255,255,255,0.1)]">
+    <div className="salesReport card dark:bg-themeDark w-full p-5 dark:border-[rgba(255,255,255,0.1)]">
 <h2 className="text-[20px] font-bold">Sales Report</h2>
 
    <div className="w-full mt-5">
@@ -397,7 +397,7 @@ const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
 
 <Orders/>
 
- <div className=" card w-full p-5 dark:border-[rgba(255,255,255,0.1)]">
+ <div className=" card dark:bg-themeDark w-full p-5 mt-4 dark:border-[rgba(255,255,255,0.1)]">
 <div className="p-5 flex items-center justify-between">
   <h2 className="text-[20px] font-bold">Repeat Customers Rate</h2>
 <div className="ml-auto">

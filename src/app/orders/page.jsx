@@ -65,7 +65,7 @@ const Orders = () => {
 
     return (
         <>
-        <div className="mt-4 card w-full p-5 dark:border-[rgba(255,255,255,0.1)]">
+        <div className="mt-4 card dark:bg-themeDark w-full p-5 dark:border-[rgba(255,255,255,0.1)]">
 <div className="p-5 flex items-center justify-between">
   <h2 className="text-[20px] font-bold">Recent Orders</h2>
 <div className="ml-auto">

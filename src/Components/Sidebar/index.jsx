@@ -21,7 +21,7 @@ const context=useContext(MyContext);
 
   return (
     <aside className=" h-screen max-h-screen overflow-y-scroll overflow-x-hidden p-3
-    border-r-[1px] border-[rgba(0,0,0,0.1)] fixed top-0 left-0 dark:bg-medium transition-all" style={{width: context.isToggleSideBar===false ? '18%' : '0%'}}>
+    border-r-[1px] border-[rgba(0,0,0,0.1)] fixed top-0 left-0 bg-white dark:bg-themeDark transition-all" style={{width: context.isToggleSideBar===false ? '18%' : '0%'}}>
      <Link href="/"><Image src="/aegisLogo.webp" width={120} height={40} alt='logo'/></Link>
     <div className='sidebarMenu mt-4'>
         {sidebarMenu?.length!==0 &&

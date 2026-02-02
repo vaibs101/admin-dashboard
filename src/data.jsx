@@ -42,11 +42,11 @@ export const sidebarMenu = [
       },
       {
         title: "Add Product",
-        href: "/products/add",
+        href: "/products/addProduct",
       },
       {
         title: "Edit Product",
-        href: "/products/edit",
+        href: "/products/editProduct",
       },
     ],
   },
@@ -220,7 +220,7 @@ export const ordersData = [
 
 export const productsData = [
   {
-    image: "",
+    image: "/avatar1.jpg",
     title: "Tasty Metal Shirt",
     cat: "Clothing",
     sku: "SKU-52442",
@@ -233,7 +233,7 @@ export const productsData = [
     status: "Pending",
   },
   {
-    image: "Modern Gloves",
+    image: "/avatar1.jpg",
     title: "Modern Gloves",
     cat: "Accessories",
     sku: "SKU-52443",
@@ -246,7 +246,7 @@ export const productsData = [
     status: "Published",
   },
   {
-    image: "",
+    image: "/avatar1.jpg",
     title: "Rustic Steel Computer",
     cat: "Electronics",
     sku: "SKU-52444",
@@ -259,7 +259,7 @@ export const productsData = [
     status: "Published",
   },
   {
-    image: "",
+    image: "/avatar1.jpg",
     title: "Electronic Rubber Table",
     cat: "Electronics",
     sku: "SKU-52445",
@@ -272,7 +272,7 @@ export const productsData = [
     status: "Draft",
   },
   {
-    image: "",
+    image: "/avatar1.jpg",
     title: "Gorgeous Bronze Gloves",
     cat: "Accessories",
     sku: "SKU-52446",
@@ -285,7 +285,7 @@ export const productsData = [
     status: "Published",
   },
   {
-    image: "",
+    image: "/avatar1.jpg",
     title: "Sleek Frozen Ball",
     cat: "Electronics",
     sku: "SKU-52447",
@@ -298,7 +298,7 @@ export const productsData = [
     status: "Pending",
   },
   {
-    image: "",
+    image: "/avatar1.jpg",
     title: "Ergonomic Frozen Pants",
     cat: "Clothing",
     sku: "SKU-52448",
