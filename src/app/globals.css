@@ -86,10 +86,15 @@ body {
   border: 1px solid rgba(0,0,0,0.2) !important;
   color: #151515 !important;
   font-weight: 600 !important;
+  font-size: 14px !important;
+}
+.btn-lg{
+  font-size: 18px !important;
 }
 .dark .btn-border{
   border: 1px solid rgba(255,255,255,0.2) !important;
-  color: #f1f1f1 !important;
+  color: #1f2937 !important;
+  background: none !important;
 }
 
 .dark .btn-border:hover{
@@ -191,4 +196,31 @@ form .MuiSelect-root fieldset .react-tagsinput{
   color: rgba(255,255,255,0.5) !important;
 }
 
+.ReactCollapse--collapse{
+  transition: height 300ms;
+}
 
+.dark .MuiBreadcrumbs-ol *{
+  color:rgba(255,255,255,0.7) !important;
+}
+
+.loginActions button{
+border: 1px solid rgba(0,0,0,0.2) !important;
+padding: 10px 20px !important;
+font-weight: bold !important;
+
+}
+
+.loginActions button:hover{
+  background: #f1f1f1 !important;
+}
+
+.userChatScroll::-webkit-scrollbar,
+.msgAreaScroll::-webkit-scrollbar{
+  width: 5px !important;
+}
+
+.userChatScroll::-webkit-scrollbar-thumb,
+.msgAreaScroll::-webkit-scrollbar-thumb{
+background: #ccc !important;
+}

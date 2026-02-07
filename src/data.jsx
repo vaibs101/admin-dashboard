@@ -6,6 +6,7 @@ import MarkEmailUnreadOutlinedIcon from "@mui/icons-material/MarkEmailUnreadOutl
 import MarkUnreadChatAltOutlinedIcon from "@mui/icons-material/MarkUnreadChatAltOutlined";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import { FaRegUser } from "react-icons/fa";
 export const sidebarMenu = [
   {
     title: "Dashboard",
@@ -67,8 +68,27 @@ export const sidebarMenu = [
   },
   {
     title: "Chat",
-    href: "/chat/list",
+    href: "/chat",
     icon: <MarkUnreadChatAltOutlinedIcon size={16} />,
+  },
+   {
+    title: "Authentication",
+    href: "/",
+    icon: <FaRegUser size={16} />,
+    items: [
+      {
+        title: "Sign In",
+        href: "/login",
+      },
+      {
+        title: "Sign up",
+        href: "/sign-up",
+      },
+      {
+        title: "Forgot Password",
+        href: "/forgot-password",
+      },
+    ],
   },
   {
     title: "Logout",
@@ -311,3 +331,72 @@ export const productsData = [
     status: "Published",
   },
 ];
+
+export const chatUserData=[
+    {
+        name:'Shannon Baker',
+        image: "/avatar1.jpg",
+        msg:'Will do, Appreciate it!',
+        time:'10:09 AM'
+    },
+    {
+        name:'Jessica Wells',
+        image: "/avatar1.jpg",
+        msg:'Perfect, I will pack some snacks and drinks',
+        time:'11:04 AM'
+    },
+    {
+        name:'Ariene Pierce',
+        image: "/avatar1.jpg",
+        msg:'Okay thanks!',
+        time:'11:40 AM'
+    },
+    {
+        name:'Shannon Baker',
+        image: "/avatar1.jpg",
+        msg:'Will do, Appreciate it!',
+        time:'10:09 AM'
+    },
+    {
+        name:'Shannon Baker',
+        image: "/avatar-7.webp",
+        msg:'Will do, Appreciate it!',
+        time:'10:09 AM'
+    },
+    {
+        name:'Shannon Baker',
+        image: "/avatar1.jpg",
+        msg:'Will do, Appreciate it!',
+        time:'10:09 AM'
+    },
+    {
+        name:'Shannon Baker',
+        image: "/avatar-7.webp",
+        msg:'Will do, Appreciate it!',
+        time:'10:09 AM'
+    },
+    {
+        name:'Shannon Baker',
+        image: "/avatar1.jpg",
+        msg:'Will do, Appreciate it!',
+        time:'10:09 AM'
+    },
+    {
+        name:'Shannon Baker',
+        image: "/avatar-7.webp",
+        msg:'Will do, Appreciate it!',
+        time:'10:09 AM'
+    },
+    {
+        name:'Shannon Baker',
+        image: "/avatar1.jpg",
+        msg:'Will do, Appreciate it!',
+        time:'10:09 AM'
+    },
+    {
+        name:'Shannon Baker',
+        image: "/avatar-7.webp",
+        msg:'Will do, Appreciate it!',
+        time:'10:09 AM'
+    },
+]
